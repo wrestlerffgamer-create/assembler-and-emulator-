@@ -1,0 +1,92 @@
+Assembler Started
+
+------------- PASS 1 STARTED -------------
+Processing Line 1 : ldc 0x1000
+Processing Line 2 : a2sp
+Processing Line 3 : adj -1
+Processing Line 4 : ldc result
+Processing Line 5 : stl 0
+Processing Line 6 : ldc count
+Processing Line 7 : ldnl 0
+Processing Line 8 : call main
+Processing Line 9 : adj 1
+Processing Line 10 : HALT
+Processing Line 12 : main:   adj -3
+Processing Line 13 : stl 1
+Processing Line 14 : stl 2
+Processing Line 15 : ldc 0
+Processing Line 16 : stl 0
+Processing Line 17 : loop:   adj -1
+Processing Line 18 : ldl 3
+Processing Line 19 : stl 0
+Processing Line 20 : ldl 1
+Processing Line 21 : call triangle
+Processing Line 22 : adj 1
+Processing Line 23 : ldl 3
+Processing Line 24 : stnl 0
+Processing Line 25 : ldl 3
+Processing Line 26 : adc 1
+Processing Line 27 : stl 3
+Processing Line 28 : ldl 0
+Processing Line 29 : adc 1
+Processing Line 30 : stl 0
+Processing Line 31 : ldl 0
+Processing Line 32 : ldl 2
+Processing Line 33 : sub
+Processing Line 34 : brlz loop
+Processing Line 35 : ldl 1
+Processing Line 36 : adj 3
+Processing Line 37 : return
+Processing Line 39 : triangle:adj -3
+Processing Line 40 : stl 1
+Processing Line 41 : stl 2
+Processing Line 42 : ldc 1
+Processing Line 43 : shl
+Processing Line 44 : ldl 3
+Processing Line 45 : sub
+Processing Line 46 : brlz skip
+Processing Line 47 : ldl 3
+Processing Line 48 : ldl 2
+Processing Line 49 : sub
+Processing Line 50 : stl 2
+Processing Line 51 : skip:   ldl 2
+Processing Line 52 : brz one
+Processing Line 53 : ldl 3
+Processing Line 54 : adc -1
+Processing Line 55 : stl 0
+Processing Line 56 : adj -1
+Processing Line 57 : ldl 1
+Processing Line 58 : stl 0
+Processing Line 59 : ldl 3
+Processing Line 60 : adc -1
+Processing Line 61 : call triangle
+Processing Line 62 : ldl 1
+Processing Line 63 : stl 0
+Processing Line 64 : stl 1
+Processing Line 65 : ldl 3
+Processing Line 66 : call triangle
+Processing Line 67 : adj 1
+Processing Line 68 : ldl 0
+Processing Line 69 : add
+Processing Line 70 : ldl 1
+Processing Line 71 : adj 3
+Processing Line 72 : return
+Processing Line 73 : one:    ldc 1
+Processing Line 74 : ldl 1
+Processing Line 75 : adj 3
+Processing Line 76 : return
+Processing Line 78 : count:  data 10
+Processing Line 79 : result: data 0
+main                10
+loop                15
+triangle            36
+skip                48
+one                 70
+count               74
+result              75
+
+------------- PASS 1 FINISHED -------------
+
+------------- PASS 2 STARTED -------------
+
+Assembler Finished Successfully

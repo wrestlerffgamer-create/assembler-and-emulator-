@@ -1,0 +1,7 @@
+Line    Address      MachineCode     Source
+------------------------------------------------
+2                                   val: SET 75
+3       00000000    00004B00        ldc val
+4       00000001    00004201        adc val2
+5                                   val2: SET 66
+6       00000002    00000012        HALT

@@ -1,0 +1,20 @@
+SIMPLEX Emulator Log
+Input file : test2.bin
+============================================
+
+Program loaded : 2 words
+
+---- Execution Trace ------------------------------------------
+PC        SP        A         B         Instruction
+---------------------------------------------------------------
+00000000  0000270F  00000000  00000000  add
+00000001  0000270F  00000000  00000000  ldc 5
+ERROR: PC=00000002 is out of bounds (program length=2)
+Execution stopped after 2 instructions due to error.
+Memory Dump
+----------------------------------------------------
+Address   Value      Instruction
+----------------------------------------------------
+00000000  00000006  add
+00000001  00000500  ldc 5
+----------------------------------------------------

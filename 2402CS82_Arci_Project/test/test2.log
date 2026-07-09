@@ -1,0 +1,32 @@
+Assembler Started
+
+------------- PASS 1 STARTED -------------
+Processing Line 3 : label:
+Processing Line 4 : label:
+ERROR (line 4): Duplicate label 'label'
+Processing Line 5 : br nonesuch
+Processing Line 6 : ldc 08ge
+Processing Line 7 : ldc
+Processing Line 8 : add 5
+Processing Line 9 : ldc 5, 6
+Processing Line 10 : 0def:
+ERROR (line 10): Invalid label name '0def'
+Processing Line 11 : fibble
+ERROR (line 11): Unknown mnemonic 'fibble'
+Processing Line 12 : 0def
+ERROR (line 12): Unknown mnemonic '0def'
+label               0
+
+------------- PASS 1 FINISHED -------------
+
+------------- PASS 2 STARTED -------------
+ERROR (line 5): Undefined symbol 'nonesuch'
+ERROR (line 6): Undefined symbol '08ge'
+ERROR (line 7): 'ldc' requires an operand
+WARNING (line 8): 'add' takes no operand, '5' ignored
+ERROR (line 9): Extra text after operand: ', 6'
+ERROR (line 11): Unknown mnemonic 'fibble'
+ERROR (line 12): Unknown mnemonic '0def'
+WARNING: Label 'label' defined but never referenced
+
+Assembler Finished Successfully

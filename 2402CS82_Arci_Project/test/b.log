@@ -1,0 +1,86 @@
+Assembler Started
+
+------------- PASS 1 STARTED -------------
+Processing Line 5 : ldc 0x1000
+Processing Line 6 : a2sp
+Processing Line 7 : call sort
+Processing Line 8 : HALT
+Processing Line 10 : sort:
+Processing Line 11 : stl 5
+Processing Line 13 : ldc count
+Processing Line 14 : ldnl 0
+Processing Line 15 : adc -1
+Processing Line 16 : stl 0
+Processing Line 19 : outer_loop:
+ERROR (line 19): Invalid label name 'outer_loop'
+Processing Line 20 : ldl 0
+Processing Line 21 : brz end_sort
+Processing Line 23 : ldc 0
+Processing Line 24 : stl 1
+Processing Line 27 : inner_loop:
+ERROR (line 27): Invalid label name 'inner_loop'
+Processing Line 28 : ldl 1
+Processing Line 29 : ldl 0
+Processing Line 30 : sub
+Processing Line 31 : brz end_inner
+Processing Line 34 : ldc array
+Processing Line 35 : ldl 1
+Processing Line 36 : add
+Processing Line 37 : stl 2
+Processing Line 40 : ldl 2
+Processing Line 41 : ldnl 0
+Processing Line 42 : stl 3
+Processing Line 44 : ldl 2
+Processing Line 45 : adc 1
+Processing Line 46 : ldnl 0
+Processing Line 47 : stl 4
+Processing Line 50 : ldl 4
+Processing Line 51 : ldl 3
+Processing Line 52 : sub
+Processing Line 53 : brlz swap
+Processing Line 54 : br no_swap
+Processing Line 57 : swap:
+Processing Line 60 : ldl 4
+Processing Line 61 : ldl 2
+Processing Line 62 : stnl 0
+Processing Line 65 : ldl 3
+Processing Line 66 : ldl 2
+Processing Line 67 : adc 1
+Processing Line 68 : stnl 0
+Processing Line 71 : no_swap:
+ERROR (line 71): Invalid label name 'no_swap'
+Processing Line 72 : ldl 1
+Processing Line 73 : adc 1
+Processing Line 74 : stl 1
+Processing Line 75 : br inner_loop
+Processing Line 77 : end_inner:
+ERROR (line 77): Invalid label name 'end_inner'
+Processing Line 78 : ldl 0
+Processing Line 79 : adc -1
+Processing Line 80 : stl 0
+Processing Line 81 : br outer_loop
+Processing Line 83 : end_sort:
+ERROR (line 83): Invalid label name 'end_sort'
+Processing Line 84 : ldl 5
+Processing Line 85 : return
+Processing Line 88 : array:  data 5
+Processing Line 89 : data 2
+Processing Line 90 : data 9
+Processing Line 91 : data 1
+Processing Line 92 : data 6
+Processing Line 93 : count:  data 5
+sort                4
+swap                36
+array               57
+count               62
+
+------------- PASS 1 FINISHED -------------
+
+------------- PASS 2 STARTED -------------
+ERROR (line 21): Undefined symbol 'end_sort'
+ERROR (line 31): Undefined symbol 'end_inner'
+ERROR (line 54): Undefined symbol 'no_swap'
+ERROR (line 75): Undefined symbol 'inner_loop'
+ERROR (line 81): Undefined symbol 'outer_loop'
+
+Assembler Finished Successfully

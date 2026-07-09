@@ -1,0 +1,16 @@
+Assembler Started
+
+------------- PASS 1 STARTED -------------
+Processing Line 2 : val: SET 75
+Processing Line 3 : ldc val
+Processing Line 4 : adc val2
+Processing Line 5 : val2: SET 66
+Processing Line 6 : HALT
+val                 75
+val2                66
+
+------------- PASS 1 FINISHED -------------
+
+------------- PASS 2 STARTED -------------
+
+Assembler Finished Successfully
